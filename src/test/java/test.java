@@ -33,7 +33,7 @@ public class test {
     @BeforeMethod
     public void setup () throws java.io.IOException {
 
-        prop.load(new FileInputStream("src/main/resources/configEMU.properties"));
+        prop.load(new FileInputStream("src/main/resources/configREAL.properties"));
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", prop.getProperty("deviceName"));
@@ -51,26 +51,27 @@ public class test {
 
     @Test
     public void basicTest () throws InterruptedException {
-        //Click and pass Splash
+
+        if (isElementPresent(By.id("com.consultantplus.app:id/button_intro_prev")) == true) { // Если есть ли приветствие
+            MobileElement el1 = (MobileElement) driver.findElementById("com.consultantplus.app:id/button_intro_prev");
+            el1.click(); // Пропускаем вступительную часть
+        }
+
         wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch"));
         ((AndroidDriver)driver).pressKeyCode(66);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //driver.findElementById("");
-       // MobileElement el3 = driver.findElementById("com.consultantplus.app:id/left_button");
-       // el3.click();
-        //Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-        while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
-            driver.findElement(By.id("com.consultantplus.app:id/retry_btn")).click();
-        }
+       // while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
+       //     driver.findElement(By.id("com.consultantplus.app:id/retry_btn")).click();
+       // }
         MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title");
         String NalogText = testel.getText();
         testel.click();
-        //Thread.sleep(5000);
-        while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
-            driver.findElement(By.id("\tcom.consultantplus.app:id/retryprogress_view_retry")).click();
-        }
+
+       // while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
+        //    driver.findElement(By.id("\tcom.consultantplus.app:id/retryprogress_view_retry")).click();
+       // }
         MobileElement Head = driver.findElement(By.xpath("//android.view.View[@content-desc='НАЛОГОВЫЙ']"));
         //MobileElement SecondHead = driver.findElement(By.xpath("//android.view.View[@content-desc='КОДЕКС РОССИЙСКОЙ ФЕДЕРАЦИИ']"));
         //MobileElement Who = driver.findElement(By.xpath("//android.view.View[@content-desc='ЧАСТЬ ПЕРВАЯ']"));
