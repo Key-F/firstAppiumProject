@@ -41,8 +41,8 @@ public class test {
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "6.0");
         caps.setCapability("skipUnlock","true");
-        caps.setCapability("appPackage", "com.consultantplus.app");
-        caps.setCapability("appActivity","com.consultantplus.app.home.ConsultantPlusHomeActivity");
+        caps.setCapability("appPackage", prop.getProperty("appPackage"));
+        caps.setCapability("appActivity",prop.getProperty("appActivity"));
         caps.setCapability("noReset","false");
         caps.setCapability("unicodeKeyboard", "true");
         driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"),caps);
@@ -53,7 +53,7 @@ public class test {
     public void basicTest () throws InterruptedException {
         //Click and pass Splash
         wait.until(ExpectedConditions.visibilityOfElementLocated
-                (By.id("com.consultantplus.app:id/search_edit"))).sendKeys("нк рф ч1" );
+                (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch"));
         ((AndroidDriver)driver).pressKeyCode(66);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //driver.findElementById("");
@@ -79,7 +79,7 @@ public class test {
         MobileElement el7 = driver.findElement(By.id("com.consultantplus.app:id/search_edit"));
         String Textin = el7.getText();
         el7.clear();
-        el7.sendKeys("Законный представитель налогоплательщика");
+        el7.sendKeys(prop.getProperty("secondSearch"));
         ((AndroidDriver)driver).pressKeyCode(66);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         MobileElement el11 = (MobileElement) driver.findElement(By.xpath("//android.view.View[@content-desc='Статья 27. ']"));
