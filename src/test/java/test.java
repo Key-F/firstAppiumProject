@@ -50,7 +50,34 @@ public class test {
     }
 
     @Test
-    public void basicTest () throws InterruptedException {
+    public void docSearchTest () throws InterruptedException {
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        if (isElementPresent(By.id("com.consultantplus.app:id/button_intro_prev")) == true) { // Если есть приветствие
+            MobileElement el1 = (MobileElement) driver.findElementById("com.consultantplus.app:id/button_intro_prev");
+            el1.click(); // Пропускаем вступительную часть
+        }
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch")); // Ввод первого запроса
+        ((AndroidDriver)driver).pressKeyCode(66);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.consultantplus.app:id/search_results_title")));
+        MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title"); // Выбор первого результата
+        testel.click();
+
+        // Проверка наличия всех необходимых элементов
+        driver.findElement(By.xpath("//android.view.View[@content-desc='НАЛОГОВЫЙ']"));
+        driver.findElement(By.xpath("//android.view.View[@content-desc='КОДЕКС']"));
+        driver.findElement(By.xpath("//android.view.View[@content-desc=' РОССИЙСКОЙ ФЕДЕРАЦИИ']"));
+        driver.findElement(By.xpath("//android.view.View[@content-desc='ЧАСТЬ']"));
+        driver.findElement(By.xpath("//android.view.View[@content-desc='ПЕРВАЯ']"));
+
+    }
+
+    @Test
+    public void searchInTextTest () throws InterruptedException {
 
         if (isElementPresent(By.id("com.consultantplus.app:id/button_intro_prev")) == true) { // Если есть ли приветствие
             MobileElement el1 = (MobileElement) driver.findElementById("com.consultantplus.app:id/button_intro_prev");
@@ -62,20 +89,20 @@ public class test {
         ((AndroidDriver)driver).pressKeyCode(66);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
-       // while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
-       //     driver.findElement(By.id("com.consultantplus.app:id/retry_btn")).click();
-       // }
+        // while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
+        //     driver.findElement(By.id("com.consultantplus.app:id/retry_btn")).click();
+        // }
         MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title");
         String NalogText = testel.getText();
         testel.click();
 
-       // while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
+        // while (isElementPresent(By.id("com.consultantplus.app:id/retry_btn")) == true) {
         //    driver.findElement(By.id("\tcom.consultantplus.app:id/retryprogress_view_retry")).click();
-       // }
+        // }
         MobileElement Head = driver.findElement(By.xpath("//android.view.View[@content-desc='НАЛОГОВЫЙ']"));
-        //MobileElement SecondHead = driver.findElement(By.xpath("//android.view.View[@content-desc='КОДЕКС РОССИЙСКОЙ ФЕДЕРАЦИИ']"));
-        //MobileElement Who = driver.findElement(By.xpath("//android.view.View[@content-desc='ЧАСТЬ ПЕРВАЯ']"));
-        //(Head.getText() + SecondHead.getText() + Who.getText()).toLowerCase().equals("налоговый кодекс российской федерации");
+        MobileElement SecondHead = driver.findElement(By.xpath("//android.view.View[@content-desc='КОДЕКС']"));
+        MobileElement Who = driver.findElement(By.xpath("//android.view.View[@content-desc=' РОССИЙСКОЙ ФЕДЕРАЦИИ']"));
+        assert((Head.getText() + SecondHead.getText() + Who.getText()).toLowerCase() == "налоговый кодекс российской федерации");
 
         MobileElement el7 = driver.findElement(By.id("com.consultantplus.app:id/search_edit"));
         String Textin = el7.getText();
@@ -122,7 +149,7 @@ public class test {
         }
 
         //Click second job
-       // wait.until(ExpectedConditions.visibilityOfElementLocated
+        // wait.until(ExpectedConditions.visibilityOfElementLocated
         //        (By.xpath(secondNewJob))).click();
 
     }
