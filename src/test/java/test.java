@@ -11,13 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
 import java.util.Properties;
 import java.io.FileInputStream;
 
@@ -63,7 +58,6 @@ public class test {
                 (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch")); // Ввод первого запроса
         ((AndroidDriver)driver).pressKeyCode(66);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.consultantplus.app:id/search_results_title")));
         MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title"); // Выбор первого результата
         testel.click();
 
@@ -90,7 +84,6 @@ public class test {
                 (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch")); // Ввод первого запроса
         ((AndroidDriver)driver).pressKeyCode(66);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.consultantplus.app:id/search_results_title")));
         MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title"); // Выбор первого результата
         testel.click();
 
@@ -115,7 +108,6 @@ public class test {
                 (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch")); // Ввод первого запроса
         ((AndroidDriver)driver).pressKeyCode(66);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.consultantplus.app:id/search_results_title")));
         MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title"); // Выбор первого результата
         testel.click();
 
