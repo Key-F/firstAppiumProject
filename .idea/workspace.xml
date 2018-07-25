@@ -19,8 +19,8 @@
       <file leaf-file-name="test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="335">
+              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7139#7140#0" expanded="true" />
@@ -161,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.test.searchStringTest">
+  <component name="RunManager" selected="TestNG.test.searchInTextTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -250,6 +250,29 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="test.searchInTextTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="firstAppiumProject" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="searchInTextTest" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration name="test.searchStringTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="firstAppiumProject" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -277,9 +300,11 @@
       <item itemvalue="TestNG.&lt;default&gt;" />
       <item itemvalue="TestNG.test.docSearchTest" />
       <item itemvalue="TestNG.test.searchStringTest" />
+      <item itemvalue="TestNG.test.searchInTextTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.test.searchInTextTest" />
         <item itemvalue="TestNG.test.searchStringTest" />
         <item itemvalue="TestNG.test.docSearchTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
@@ -300,15 +325,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_docSearchTest - 2018.07.25 at 09h 59m 10s.xml">
-      <configuration name="test.docSearchTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_docSearchTest - 2018.07.25 at 10h 03m 50s.xml">
-      <configuration name="test.docSearchTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_docSearchTest - 2018.07.25 at 10h 20m 42s.xml">
-      <configuration name="test.docSearchTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="test_searchStringTest - 2018.07.25 at 10h 31m 53s.xml">
       <configuration name="test.searchStringTest" configurationId="TestNG" />
     </history-entry>
@@ -330,6 +346,15 @@
     <history-entry file="test_searchStringTest - 2018.07.25 at 10h 44m 28s.xml">
       <configuration name="test.searchStringTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="test_searchInTextTest - 2018.07.25 at 11h 06m 27s.xml">
+      <configuration name="test.searchInTextTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="test_searchInTextTest - 2018.07.25 at 11h 08m 07s.xml">
+      <configuration name="test.searchInTextTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="test_searchInTextTest - 2018.07.25 at 11h 13m 29s.xml">
+      <configuration name="test.searchInTextTest" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -344,7 +369,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3284055" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3284055" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -354,7 +379,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2090813" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2090813" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,7 +394,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -441,8 +466,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="335">
+          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7139#7140#0" expanded="true" />
