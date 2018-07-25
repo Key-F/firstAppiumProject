@@ -49,7 +49,7 @@ public class test {
         wait = new WebDriverWait(driver, 10);
     }
 
-    @Test
+    @Test // [UT.1]
     public void docSearchTest () throws InterruptedException {
 
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -76,7 +76,31 @@ public class test {
 
     }
 
-    @Test
+    @Test // [UT.2]
+    public void searchStringTest () throws InterruptedException {
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        if (isElementPresent(By.id("com.consultantplus.app:id/button_intro_prev")) == true) { // Если есть приветствие
+            MobileElement el1 = (MobileElement) driver.findElementById("com.consultantplus.app:id/button_intro_prev");
+            el1.click(); // Пропускаем вступительную часть
+        }
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.id("com.consultantplus.app:id/search_edit"))).sendKeys(prop.getProperty("firstSearch")); // Ввод первого запроса
+        ((AndroidDriver)driver).pressKeyCode(66);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.consultantplus.app:id/search_results_title")));
+        MobileElement testel = driver.findElementById("com.consultantplus.app:id/search_results_title"); // Выбор первого результата
+        testel.click();
+
+        MobileElement el7 = driver.findElement(By.id("com.consultantplus.app:id/search_edit")); // Поиск строки поиска
+        String Textin = el7.getText();
+
+        Assert.assertEquals(Textin, prop.getProperty("firstSearch"));
+
+    }
+
     public void searchInTextTest () throws InterruptedException {
 
         if (isElementPresent(By.id("com.consultantplus.app:id/button_intro_prev")) == true) { // Если есть ли приветствие
@@ -153,13 +177,12 @@ public class test {
         //        (By.xpath(secondNewJob))).click();
 
     }
-
     @AfterMethod
     public void teardown(){
         driver.quit();
     }
 
-    protected boolean isElementPresent(By by) {
+    protected boolean isElementPresent(By by) {  // Метод для проверки наличия элемента
         try
         {
             driver.findElement(by);
