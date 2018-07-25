@@ -20,9 +20,10 @@
       <file leaf-file-name="test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="51">
+              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#7139#7140#0" expanded="true" />
                 <element signature="e#7168#7169#0" expanded="true" />
               </folding>
@@ -82,9 +83,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="329" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="838" />
+    <option name="y" value="306" />
     <option name="width" value="1400" />
     <option name="height" value="1010" />
   </component>
@@ -183,6 +184,7 @@
     </configuration>
     <configuration name="&lt;default&gt;" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <output_file path="$PROJECT_DIR$" is_save="true" />
+      <log_file alias="log" path="$PROJECT_DIR$/hs_err_pid32.log" />
       <module name="firstAppiumProject" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -325,21 +327,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_searchStringTest - 2018.07.25 at 10h 35m 13s.xml">
-      <configuration name="test.searchStringTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_searchStringTest - 2018.07.25 at 10h 38m 52s.xml">
-      <configuration name="test.searchStringTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_searchStringTest - 2018.07.25 at 10h 41m 52s.xml">
-      <configuration name="test.searchStringTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_searchStringTest - 2018.07.25 at 10h 43m 45s.xml">
-      <configuration name="test.searchStringTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_searchStringTest - 2018.07.25 at 10h 44m 28s.xml">
-      <configuration name="test.searchStringTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="test_searchInTextTest - 2018.07.25 at 11h 06m 27s.xml">
       <configuration name="test.searchInTextTest" configurationId="TestNG" />
     </history-entry>
@@ -353,6 +340,21 @@
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_default_ - 2018.07.25 at 11h 29m 20s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2018.07.25 at 11h 32m 40s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2018.07.25 at 11h 58m 07s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2018.07.25 at 12h 00m 35s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2018.07.25 at 12h 07m 00s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2018.07.25 at 12h 18m 57s.xml">
       <configuration name="&lt;default&gt;" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -410,6 +412,7 @@
         <state relative-caret-position="799">
           <caret line="47" column="85" lean-forward="true" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#7139#7140#0" expanded="true" />
             <element signature="e#7168#7169#0" expanded="true" />
           </folding>
@@ -465,9 +468,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="51">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#7139#7140#0" expanded="true" />
             <element signature="e#7168#7169#0" expanded="true" />
           </folding>
